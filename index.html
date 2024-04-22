@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link href="./output.css" rel="stylesheet">
 
     <!-- FontAwesome CDN -->
 
@@ -18,10 +18,10 @@
 
 </head>
 <body>
-    <div id="mainContainer" class="h-screen ">
+    <div id="mainContainer">
         <!-- NavBar -->
 
-        <div class="w-screen fixed z-10 top-0 mx-auto" id="navBar">
+        <div class="w-screen fixed top-0 z-10 " id="navBar">
             <nav class="w-10/12 mx-auto flex py-3 items-center">
                 <h1 class="text-2xl font-semibold w-2/4 cursor-pointer text-blue-500" title="Logo">Social<span class="text-blue-800">Web</span>
                 </h1>
@@ -44,7 +44,6 @@
                     <li>
                         <span class="navIcons">
                             <img src="Images/adminProfile.jpg" alt="Admin Profile" class=" w-10 h-10 rounded-full cursor-pointer" title="User Profile">
-                            <i class="fa fa-bars hidden" aria-hidden="true"></i>
                         </span>
                     </li>
                 </ul>
@@ -53,11 +52,11 @@
 
         <!--Main Content -->
 
-        <main class="mt-16 flex justify-center">
+        <main class="mt-16 flex justify-center h-screen">
 
             <!-- LEFT SIDE BAR -->
 
-            <aside class="" id="leftSideBar">
+            <aside id="leftSideBar">
                 <div class="w-full mb-2 rounded-2xl bg-white mt-4">
                     <div class="flex items-center gap-4 p-4">
                         <img src="Images/adminProfile.jpg" alt="Admin Profile" class=" w-12 h-12 rounded-full cursor-pointer" title="User Profile">
@@ -107,9 +106,10 @@
             <div class="mt-4 rounded-xl px-4" id="middleContent">
 
                 <!-- Stories Container -->
+
                 <div class="pb-4 rounded-xl flex justify-between relative" id="storiesContainer">
 
-                    <div class="stories relative cursor-pointer overflow-hidden flex flex-col justify-end w-24 h-48 rounded-xl bg-sky-700" onmouseover="playVideo()" onmouseout="pauseVideo()">
+                    <div class="stories relative cursor-pointer overflow-hidden flex flex-col justify-end w-24 h-48 rounded-xl bg-sky-700">
                         <img src="Images/story1.avif" alt="User Stories" class="absolute inset-0 h-full w-full object-cover rounded-lg">
                         <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/40 rounded-lg"></div>
                         <div class="z-10 gap-y-1 overflow-hidden text-sm text-center leading-6 text-gray-300 py-2 px-3" >Zain Kashif</div>
@@ -148,20 +148,23 @@
                 </div>
 
                 <!-- POST CONTAINER -->
-                <div class="bg-white rounded-xl">
+                <section class="bg-white rounded-xl">
+
+                    <!-- Add Post Section -->
+
                     <div class="px-2 py-4 rounded-lg flex">
                         <img src="Images/adminProfile.jpg" alt="" class="w-11 h-11 rounded-full">
                         <input type="text" placeholder="What's on your mind, Zain?" class="ml-3 w-72 p-2 rounded-lg border-2 focus:border-blue-300 focus:outline-none" tabindex="0">
-                        <button class="bg-sky-400 hover:bg-sky-600 text-white py-2 px-4 rounded-lg">Post</button>
+                        <button class="bg-sky-400 hover:bg-sky-600 text-white py-2 px-4 rounded-lg content-end">Post</button>
                     </div>
-                    <div class="rounded-lg bg-sky-400 w-full h-36">
-                    </div>
-                </div>
+                    <!-- <div class="rounded-lg bg-sky-400 w-full h-36">
+                    </div> -->
+                </section>
             </div>
 
             <!-- RIGHT SIDE BAR -->
 
-            <aside class="" id="rightSideBar">
+            <aside id="rightSideBar">
                 <div class="w-full rounded-2xl bg-white mt-4 py-4 pl-3" id="eventsWrapper">
 
                     <h2 class="mb-4 text-sky-600 text-lg font-semibold">Upcoming Events</h2>
@@ -224,7 +227,6 @@
         </main>
 
     </div>
-
 
     
 </body>
