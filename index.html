@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- FontAwesome CDN -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+    <div id="mainContainer" class="h-screen ">
+        <!-- NavBar -->
+
+        <div class="w-screen fixed z-10 top-0 mx-auto" id="navBar">
+            <nav class="w-10/12 mx-auto flex py-3 items-center">
+                <h1 class="text-2xl font-semibold w-2/4 cursor-pointer text-blue-500" title="Logo">Social<span class="text-blue-800">Web</span>
+                </h1>
+                <ul class="flex w-2/4 justify-end items-center gap-5">
+                    <li>
+                            <form class="group relative">
+                                <svg width="20" height="20" fill="currentColor" class="absolute left-3 top-1/2 -mt-2.5 text-slate-400 pointer-events-none group-focus-within:text-blue-500" aria-hidden="true">
+                                  <path fill-rule="evenodd" clip-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" />
+                                </svg>
+                                <input class="focus:ring-2 focus:ring-blue-300 focus:outline-none appearance-none w-full text-sm leading-6 text-slate-900 placeholder-slate-400 rounded-md py-2 pl-10 ring-1 ring-slate-200 shadow-sm" type="text" placeholder="Search...">
+                              </form>
+                        </span>
+                    </li>
+                    <li class="mr-1">
+                        <span class="navIcons relative">
+                            <i class=" fa fa-bell-o" aria-hidden="true" title="Notifications"></i>
+                            <small id="notificationCount" class="bottom-3 left-2 bg-red-700 rounded-3xl absolute text-white p-1">9+</small>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="navIcons">
+                            <img src="Images/adminProfile.jpg" alt="Admin Profile" class=" w-10 h-10 rounded-full cursor-pointer" title="User Profile">
+                            <i class="fa fa-bars hidden" aria-hidden="true"></i>
+                        </span>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <!--Main Content -->
+
+        <main class="mt-16 flex justify-center">
+
+            <!-- LEFT SIDE BAR -->
+
+            <div class="" id="leftSideBar">
+                <div class="w-full mb-2 rounded-2xl bg-white mt-4">
+                    <div class="flex items-center gap-4 p-4">
+                        <img src="Images/adminProfile.jpg" alt="Admin Profile" class=" w-12 h-12 rounded-full cursor-pointer" title="User Profile">
+                        <div>
+                            <h5 class="block antialiased tracking-normal font-sans text-xl font-semibold leading-snug text-gray-900">Ali Zain Kashif</h5>
+                            <span class="opacity-60 ">@alizainkashif</span>
+                        </div>
+                    </div>
+
+                    <ul>
+                        <li class="leftSideLi" tabindex="0">
+                            <i class="fa fa-home" aria-hidden="true"></i> 
+                            <span>Home</span>
+                        </li>
+                        <li class="leftSideLi" tabindex="0">
+                            <i class="fa fa-users" aria-hidden="true"></i>
+                            <span>Friends</span>
+                        </li>
+                        <li class="leftSideLi" tabindex="0">
+                            <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                            <span>Messages</span>
+                        </li>
+                        <li class="leftSideLi" tabindex="0">
+                            <i class="fa fa-gamepad" aria-hidden="true"></i>
+                            <span>Games</span>
+                        </li>
+                        <li class="leftSideLi" tabindex="0">
+                            <i class="fa fa-desktop" aria-hidden="true"></i>
+                            <span>Accessibility</span>
+                        </li>
+                        <li class="leftSideLi" tabindex="0">
+                            <i class="fa fa-cog" aria-hidden="true"></i>
+                            <span>Settings & Privacy</span>
+                        </li>
+                        <li class="leftSideLi rounded-bl-2xl" tabindex="0">
+                            <i class="fa fa-sign-out" aria-hidden="true"></i>
+                            <span>Logout</span>
+                        </li>
+                    </ul>
+
+                </div>
+
+            </div>
+
+            <!-- MIDDLE CONTENT -->
+
+            <div class="mt-4 rounded-xl px-4" id="middleContent">
+
+                <!-- Stories Container -->
+                <div class="pb-4 rounded-xl flex justify-between relative" id="storiesContainer">
+
+                    <div class="stories relative cursor-pointer overflow-hidden flex flex-col justify-end w-24 h-48 rounded-xl bg-sky-700" onmouseover="playVideo()" onmouseout="pauseVideo()">
+                        <img src="Images/story1.avif" alt="User Stories" class="absolute inset-0 h-full w-full object-cover rounded-lg">
+                        <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/40 rounded-lg"></div>
+                        <div class="z-10 gap-y-1 overflow-hidden text-sm text-center leading-6 text-gray-300 py-2 px-3" >Zain Kashif</div>
+                    </div>
+
+                        <div class="stories relative cursor-pointer overflow-hidden flex flex-col justify-end w-24 h-48 rounded-xl bg-sky-700" onmouseover="playVideo()" onmouseout="pauseVideo()">
+                            <img src="Images/story2avif.avif" alt="User Stories" class="absolute inset-0 h-full w-full object-cover rounded-lg">
+                            <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/40 rounded-lg"></div>
+                            <div class="z-10 gap-y-1 overflow-hidden text-sm text-center leading-6 text-gray-300 py-2 px-3" >Almas Khan</div>
+                        </div>
+
+                        <div class="stories relative cursor-pointer overflow-hidden flex flex-col justify-end w-24 h-48 rounded-xl bg-sky-700" onmouseover="playVideo()" onmouseout="pauseVideo()">
+                            <img src="Images/story3avif.avif" alt="User Stories" class="absolute inset-0 h-full w-full object-cover rounded-lg">
+                            <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/40 rounded-lg"></div>
+                            <div class="z-10 gap-y-1 overflow-hidden text-sm text-center leading-6 text-gray-300 py-2 px-3" >Tanzeel Ahmad</div>
+                        </div>
+
+                        <div class="stories relative cursor-pointer overflow-hidden flex flex-col justify-end w-24 h-48 rounded-xl bg-sky-700" onmouseover="playVideo()" onmouseout="pauseVideo()">
+                            <img src="Images/story4.avif" alt="User Stories" class="absolute inset-0 h-full w-full object-cover rounded-lg">
+                            <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/40 rounded-lg"></div>
+                            <div class="z-10 gap-y-1 overflow-hidden text-sm text-center leading-6 text-gray-300 py-2 px-3" >Moazzam Ali</div>
+                        </div>
+
+                        <div class="stories relative cursor-pointer overflow-hidden flex flex-col justify-end w-24 h-48 rounded-xl bg-sky-700" onmouseover="playVideo()" onmouseout="pauseVideo()">
+                            <img src="Images/story6.avif" alt="User Stories" class="absolute inset-0 h-full w-full object-cover rounded-lg">
+                            <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/40 rounded-lg"></div>
+                            <div class="z-10 gap-y-1 overflow-hidden text-sm text-center leading-6 text-gray-300 py-2 px-3" >Salman Nazir</div>
+                        </div>
+
+                        <div class="stories relative cursor-pointer overflow-hidden flex flex-col justify-end w-24 h-48 rounded-xl bg-sky-700" onmouseover="playVideo()" onmouseout="pauseVideo()">
+                            <img src="Images/story7.avif" alt="User Stories" class="absolute inset-0 h-full w-full object-cover rounded-lg">
+                            <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/40 rounded-lg"></div>
+                            <div class="z-10 gap-y-1 overflow-hidden text-sm text-center leading-6 text-gray-300 py-2 px-3" >Attiq Rehman</div>
+                        </div>
+
+                </div>
+
+                <!-- POST CONTAINER -->
+                <div class="bg-white rounded-xl">
+                    <div class="px-2 py-4 rounded-lg flex">
+                        <img src="Images/adminProfile.jpg" alt="" class="w-11 h-11 rounded-full">
+                        <input type="text" placeholder="What's on your mind, Zain?" class="ml-3 w-72 p-2 rounded-lg border-2 focus:border-blue-300 focus:outline-none" tabindex="0">
+                        <button class="bg-sky-400 hover:bg-sky-600 text-white py-2 px-4 rounded-lg">Post</button>
+                    </div>
+                    <div class="rounded-lg bg-sky-400 w-full h-36">
+                        <p>
+                            <i class="fas fas-search "></i> Videos
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- RIGHT SIDE BAR -->
+
+            <div class="" id="rightSideBar">
+                <div class="w-full rounded-2xl bg-white mt-4 py-4 pl-3" id="eventsWrapper">
+
+                    <h2 class="mb-4 text-sky-600 text-lg font-semibold">Upcoming Events</h2>
+
+
+                    <div class="flex items-center gap-4 mb-5">
+                        <div class="eventsHeight text-center rounded-lg flex justify-end flex-col border-2 cursor-pointer">
+                            <p class= "pb-1 text-xl font-semibold text-sky-400">09</p>
+                            <p class="bg-sky-400 w-full rounded-b-lg text-xs py-1 text-white">May</p>
+                        </div>
+                        <div>
+                            <h5 class="block antialiased tracking-normal font-sans text-base font-semibold leading-snug text-gray-900">
+                                React Interview Session
+                            </h5>
+                            <span class="opacity-60 ">
+                                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                RAOWA Club
+                            </span>
+                            <p class="text-sky-400 cursor-pointer text-sm">Read More</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-4 mb-5">
+                        <div class="eventsHeight text-center rounded-lg flex justify-end flex-col border-2 cursor-pointer">
+                            <p class= "pb-1 text-xl font-semibold text-sky-400">18</p>
+                            <p class="bg-sky-400 w-full rounded-b-lg text-sm p-1 text-white">June</p>
+                        </div>
+                        <div>
+                            <h5 class="block antialiased tracking-normal font-sans text-base font-semibold leading-snug text-gray-900">
+                                AHZ Consultants Groups
+                            </h5>
+                            <span class="opacity-60 ">
+                                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                Le Méridien, Dhaka
+                            </span>
+                            <p class="text-sky-400 cursor-pointer text-sm">Read More</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-4">
+                        <div class="eventsHeight text-center rounded-lg flex justify-end flex-col border-2 cursor-pointer">
+                            <p class= "pb-1 text-xl font-semibold text-sky-400">28</p>
+                            <p class="bg-sky-400 w-full rounded-b-lg text-sm p-1 text-white">August</p>
+                        </div>
+                        <div>
+                            <h5 class="block antialiased tracking-normal font-sans text-base font-semibold leading-snug text-gray-900">
+                                Google Developer's
+                            </h5>
+                            <span class="opacity-60 ">
+                                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                Radisson Blu, Iran
+                            </span>
+                            <p class="text-sky-400 cursor-pointer text-sm">Read More</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </main>
+
+    </div>
+
+
+    
+</body>
+</html>
