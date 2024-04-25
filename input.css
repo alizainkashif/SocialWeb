@@ -20,9 +20,6 @@
   background-color: #e9f1f8;
 }
 
-/* .ok {
-  @apply text-5xl text-white bg-blue-900 text-center;
-} */
 
 /* NAVBAR */
 
@@ -44,7 +41,6 @@
 }
 #middleContent {
   width: 42%;
-  /* background-color: black; */
 }
 
 /* LEFT SIDE BAR */
@@ -69,22 +65,44 @@
 }
 
 /* RightSide Bar Events */
+
 .eventsHeight {
   width: 70px;
   height: 72px;
 }
 
 
-/* Middle Content Styling */
-/* Stories */
-/* .stories {
-  outline:2px solid radial-gradient(rgba(0, 0, 0, 0.15) 60%, transparent 0),radial-gradient(white 65%, transparent 0),linear-gradient(to top right, deeppink, orange)
-} */
+.postImages {
+  height: 350px;
+}
 
-/* #hello {
-   @apply text-2xl text-blue-200 bg-sky-700;
-} */
 
-/* .select2-search {
-  @apply border border-gray-300 rounded text-sky-400 !important ;
+/* less then sm media query css */
+/* 585 to 638 */
+
+/* header */
+#navBar nav {
+  @apply xs:w-full xs:px-3;
+}
+#navBar #headerSearch {
+  @apply xs:hidden;
+}
+
+/* Middle Container */
+main {
+  @apply xs:flex-wrap;
+}
+main #leftSideBar {
+  @apply w-[25%] xl:w-[20.5%] md:w-[34%] sm:w-[34%] xs:w-full;
+}
+main #rightSideBar {
+   @apply w-[25%] xl:w-[21.5%] md:hidden sm:hidden xs:w-full;
+}
+
+main #middleContent {
+  @apply xs:w-full w-[50%] md:w-[64%] sm:w-[64%];
+}
+
+/* main #storiesContainer .stories {
+  @apply xs:overflow-auto;
 } */
